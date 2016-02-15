@@ -8,7 +8,7 @@ public class JavaMisc{
 
     //put stuff you want to test in here!
     public static void main(String[] args){
-    	System.out.println(factorial(5));
+    	manyCollatz(1000);
     }
 
 
@@ -158,6 +158,7 @@ public class JavaMisc{
     }
     
     
+    //For a Project Euler problem
     //return sum of all multiples of a OR b that are less than limit
     public static int multiples(int limit, int a, int b){
       int sum = 0;
@@ -273,6 +274,7 @@ public class JavaMisc{
         String newChileanString = removeLetter(input, 's');
         System.out.println(newChileanString + " po");
       }
+      scanner.close();
     }
     
     //Please someone ask me this at an interview
