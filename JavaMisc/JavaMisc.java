@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * A bunch of miscellaneous stuff:
+ * Java sandbox. A bunch of miscellaneous stuff.
  */
 public class JavaMisc{
 
@@ -45,8 +45,9 @@ public class JavaMisc{
             }
             
         }
-        //I wanted to use a HashMap and wanted to order it. I learned that Maps can be ordered
-        //if you put them in a TreeMap. Yeeaah polymorphism
+        //I wanted to use a HashMap and also wanted to order it. I learned
+        //on StackOverflow (of course) that Maps can be ordered
+        //if you put them in a TreeMap. Woohoo, polymorphism!
         Map<Integer, Integer> orderedMap = new TreeMap<Integer, Integer>(map);
         System.out.println(orderedMap.toString());
         System.out.println("first highest peak was " + num + " peaking at " + peak);
@@ -170,7 +171,7 @@ public class JavaMisc{
     
     //For a Project Euler problem
     //give it an int, returns if it reads the same backward/forward (palindrome)
-    public static boolean isItAPalindrome(int x){
+    public static boolean isPalindrome(int x){
       String forward = "" + x;
       String backward = "";
       
@@ -181,15 +182,15 @@ public class JavaMisc{
     }
     
     //For a Project Euler problem
-    //using JavaMisc.isItAPalindrome above, find largest one that is the product
-    //of two 3-digit numbers, also print those factors. Inefficient brute force method
+    //using JavaMisc.isPalindrome above, find largest one that is the product
+    //of two 3-digit numbers, also print those factors. Brute force method
     public static int largestPalindrome(){
       int highScore = 0;
       int a = 0;
       int b = 0;
       for (int i = 100; i <= 999; i++){
         for (int j = 100; j <= 999; j++){
-          if (isItAPalindrome(i*j) && i*j > highScore){
+          if (isPalindrome(i*j) && i*j > highScore){
             highScore = i*j;
             a = i;
             b = j;
@@ -224,7 +225,7 @@ public class JavaMisc{
     }
     
     //encode String by decrementing ascii value of chars
-    //has an issue with the escape char "\"
+    //Do not use escape char "\"
     public static String encode(String s){
       String result = "";
       for (int i = 0; i < s.length(); i++){
@@ -236,7 +237,7 @@ public class JavaMisc{
     }
     
     //decode String by incrementing ascii value of chars
-    //has an issue with the escape char "\"
+    //Do not use escape char "\"
     public static String decode(String s){
       String result = "";
       for (int i = 0; i < s.length(); i++){
@@ -247,7 +248,7 @@ public class JavaMisc{
       return result;
     }
     
-    //remove all char x from String s
+    //Remove all char x from String s
     public static String removeLetter(String s, char x){
       
       String result = "";
@@ -260,7 +261,7 @@ public class JavaMisc{
       return result;
     }
     
-    //Joke method: Translate Spanish to Chilean Spanish
+    //Just a joke: Translate Spanish to Chilean Spanish
     //(removes the letter "s" and appends "po" to everything)
     public static void toChilean(){
       String input = "";
@@ -277,8 +278,9 @@ public class JavaMisc{
       scanner.close();
     }
     
-    //Please someone ask me this at an interview
-    //Please
+    //Phenomenal question to ask me at an interview
+    //Demonstrates peak human mental prowess
+    //Requires machine learning and neural networks, probably
     public static void fizzBuzz(int n){
       for (int i = 0; i <= n; i++){
         System.out.print(i + " ");
