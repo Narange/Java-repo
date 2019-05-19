@@ -1,6 +1,6 @@
 /**
  * Orignially a work-in-progress GUI for a "Connect Four" game.
- * The project was discontinued, but what reamain is a cool graphical gadget.
+ * The project was discontinued, but what remains is a cool graphical gadget.
  * Currently this draws the game board and places "pieces"
  * For example, in public GUI() there is the following line:
  * 
