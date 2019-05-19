@@ -1,3 +1,14 @@
+/**
+ * Orignially a work-in-progress GUI for a "Connect Four" game.
+ * The project was discontinued, but what reamain is a cool graphical gadget.
+ * Currently this draws the game board and places "pieces"
+ * For example, in public GUI() there is the following line:
+ * 
+ * boardTestGUI.get(0).set(0,1);
+ * 
+ * This places a piece in the 0,1 position.
+ */
+
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -86,9 +97,6 @@ class GUI extends JFrame implements ActionListener{
   
   public static void main(String[] args){
     GUI gui = new GUI();
-    
-    String[] argsMainGame = {"-h"};
-    MainGame.main(argsMainGame);
   }
   
   public void actionPerformed(ActionEvent e){
